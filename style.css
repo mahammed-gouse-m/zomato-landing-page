@@ -9,6 +9,24 @@ body {
     background-color: #ebebeb;
 }
 
+.button__primary{
+    background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 51%,
+        #ff512f 100%
+    );
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.container{
+    max-width: 100%;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
 .navbar{
     display: flex;
     align-items: center;
@@ -41,21 +59,66 @@ body {
 .nav__item:hover{
     border: 2px pink;
 }
+.hero__container{
+    margin: 1rem;
+}
 
+.hero__image_container{
+    position: relative;
+    width: 100%;
+}
+.hero__image__shape{
+    position: absolute;
+}
+
+.hero__image{
+    position: absolute;
+    width: 100%;
+    right: auto;
+    left: auto;
+    z-index: 2;
+    border-radius: 6px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+.hero__text{
+    font-size: 30px;
+    margin: 20px 0px;
+}
 @media (min-width: 768px){
     .navbar{
         justify-content: space-between;
-        padding: 10px 30px;
+        padding: 2px 30px;
+    }
+    .hero__container{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
     }
 }
 
 @media(min-width:1020px){
+    .container{
+        max-width: 900px;
+    }
     .navbar__brand{
         width: 150px;
     }
+    .hero__description{
+        width: 100%;
+    }
+    .hero__text{
+        font-size: 50px;
+    }
 }
 
-.nav__item{
+.button__primary{
     padding: 20px;
     font-size: 20px;
+}
+@media(min-width:1400px){
+    .container{
+        max-width: 1250px;
+    }
 }
